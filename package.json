@@ -1,0 +1,29 @@
+{
+  "name": "github-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify index.js -t [ envify --NODE_ENV production ] -o  assets/bundle.js",
+    "start": "budo index.js:bundle.js --live -- -t [ envify --NODE_ENV development ]",
+    "build-css": "node-sass --watch --include-path scss scss/main.scss  css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "budo": "^9.3.0",
+    "envify": "^4.0.0",
+    "node-sass": "^4.0.0",
+    "yaml-js": "^0.1.4",
+    "yamljs": "^0.2.8"
+  },
+  "dependencies": {
+    "cookie-cutter": "^0.2.0",
+    "js-yaml": "^3.7.0",
+    "moment": "^2.17.1",
+    "travis-ci": "^2.1.1",
+    "write-yaml": "^0.2.2",
+    "xhr": "^2.3.1"
+  }
+}
